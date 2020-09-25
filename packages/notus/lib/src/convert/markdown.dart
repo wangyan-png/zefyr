@@ -82,13 +82,13 @@ class _NotusMarkdownEncoder extends Converter<Delta, String> {
 
     while (iterator.hasNext) {
       final op = iterator.next();
-      final lf = op.data.indexOf('\n');
+      final lf = op.data.toString().indexOf('\n');
       if (lf == -1) {
         _handleSpan(op.data, op.attributes);
       } else {
         var span = StringBuffer();
-        for (var i = 0; i < op.data.length; i++) {
-          if (op.data.codeUnitAt(i) == 0x0A) {
+        for (var i = 0; i < op.data.toString().length; i++) {
+          if (op.data.toString().codeUnitAt(i) == 0x0A) {
             if (span.isNotEmpty) {
               // Write the span if it's not empty.
               _handleSpan(span.toString(), op.attributes);
@@ -98,7 +98,7 @@ class _NotusMarkdownEncoder extends Converter<Delta, String> {
             _handleLine(op.attributes);
             span.clear();
           } else {
-            span.writeCharCode(op.data.codeUnitAt(i));
+            span.writeCharCode(op.data.toString().codeUnitAt(i));
           }
         }
         // Remaining span

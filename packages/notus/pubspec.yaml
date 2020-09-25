@@ -5,13 +5,12 @@ author: Anatoly Pulyaevskiy <anatoly.pulyaevskiy@gmail.com>
 homepage: https://github.com/memspace/zefyr
 
 environment:
-  sdk: ">=2.2.2 <3.0.0"
-  #sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.8.0 <3.0.0"
 
 dependencies:
   collection: ^1.14.13
-  meta: ^1.1.8
-  quill_delta: ^1.0.2
+  meta: ^1.2.3
+  quill_delta: ^2.0.0
   quiver_hashcode: ^2.0.0
 
 dev_dependencies:
