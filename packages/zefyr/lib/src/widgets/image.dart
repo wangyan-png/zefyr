@@ -38,6 +38,12 @@ abstract class ZefyrImageDelegate<S> {
   /// an image file on user's device, an HTTP link, or an identifier generated
   /// by a file hosting service like AWS S3 or Google Drive.
   Future<String> pickImage(S source);
+
+  /// yg: pick multiple images
+  ///
+  /// Returns list of unique string keys for the selected images. Returned key is stored
+  /// in the document.
+  Future<List<String>> pickImages(S source);
 }
 
 class ZefyrImage extends StatefulWidget {

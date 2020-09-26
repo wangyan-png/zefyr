@@ -287,10 +287,21 @@ class _ImageButtonState extends State<ImageButton> {
 
   void _pickFromGallery() async {
     final editor = ZefyrToolbar.of(context).editor;
+    /* // selecting single image only
     final image = await editor.imageDelegate
         .pickImage(editor.imageDelegate.gallerySource);
     if (image != null) {
       editor.formatSelection(NotusAttribute.embed.image(image));
+    }
+    */
+    // selecting multiple images
+    final images = await editor.imageDelegate
+        .pickImages(editor.imageDelegate.gallerySource);
+    if (images != null) {
+      print('images: ${images.length}');
+      images.forEach((image) {
+        editor.formatSelection(NotusAttribute.embed.image(image));
+      });
     }
   }
 }
