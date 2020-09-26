@@ -301,6 +301,7 @@ class _ImageButtonState extends State<ImageButton> {
       print('images: ${images.length}');
       images.forEach((image) {
         editor.formatSelection(NotusAttribute.embed.image(image));
+        editor.formatSelection(NotusAttribute.embed.horizontalRule);
       });
     }
   }
