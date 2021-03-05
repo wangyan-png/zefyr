@@ -90,4 +90,9 @@ class _TestImageDelegate implements ZefyrImageDelegate<String> {
   Future<String> pickImage(String source) {
     return null;
   }
+
+  @override
+  Future<List<String>> pickImages(String source) {
+    return null;
+  }
 }

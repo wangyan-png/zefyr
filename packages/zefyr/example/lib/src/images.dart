@@ -19,9 +19,10 @@ class CustomImageDelegate implements ZefyrImageDelegate<ImageSource> {
 
   @override
   Future<String> pickImage(ImageSource source) async {
-    final file = await ImagePicker.pickImage(source: source);
+    final _filePicker = ImagePicker();
+    final file = await _filePicker.getImage(source: source);
     if (file == null) return null;
-    return file.uri.toString();
+    return File(file.path).uri.toString();
   }
 
   @override
@@ -36,5 +37,11 @@ class CustomImageDelegate implements ZefyrImageDelegate<ImageSource> {
       final image = FileImage(file);
       return Image(image: image);
     }
+  }
+
+  @override
+  Future<List<String>> pickImages(ImageSource source) {
+    // TODO: implement pickImages
+    throw UnimplementedError();
   }
 }

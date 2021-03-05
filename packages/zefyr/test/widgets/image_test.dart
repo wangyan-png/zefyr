@@ -105,4 +105,9 @@ class _TestImageDelegate implements ZefyrImageDelegate<String> {
   Future<String> pickImage(String source) {
     return Future.value('file:///tmp/test.jpg');
   }
+
+  @override
+  Future<List<String>> pickImages(String source) {
+    return Future.value(['file:///tmp/test.jpg']);
+  }
 }

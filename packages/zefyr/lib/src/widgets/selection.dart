@@ -657,14 +657,15 @@ class _SelectionToolbarState extends State<_SelectionToolbar> {
     );
 
     final toolbar = controls.buildToolbar(
-      context,
-      editingRegion,
-      block.preferredLineHeight,
-      midpoint,
-      endpoints,
-      widget.selectionOverlay,
-      widget.clipboardStatus,
-    );
+        context,
+        editingRegion,
+        block.preferredLineHeight,
+        midpoint,
+        endpoints,
+        widget.selectionOverlay,
+        widget.clipboardStatus,
+        null // lastSecondaryTapDownPosition is new param
+        );
     return CompositedTransformFollower(
       link: block.layerLink,
       showWhenUnlinked: false,
