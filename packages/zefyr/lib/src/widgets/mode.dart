@@ -1,5 +1,6 @@
 import 'package:meta/meta.dart';
-import 'package:quiver_hashcode/hashcode.dart';
+//import 'package:quiver_hashcode/hashcode.dart';
+import 'package:quiver/core.dart';
 
 /// Controls level of interactions allowed by Zefyr editor.
 ///
