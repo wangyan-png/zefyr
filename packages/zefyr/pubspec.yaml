@@ -1,7 +1,6 @@
 name: zefyr
 description: Clean, minimalistic and collaboration-ready rich text editor for Flutter.
 version: 0.13.0
-author: Anatoly Pulyaevskiy <anatoly.pulyaevskiy@gmail.com>
 homepage: https://github.com/memspace/zefyr
 
 environment:
@@ -11,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   collection: ^1.15.0
-  url_launcher: ^5.7.10
+  url_launcher: ^6.0.9
   quill_delta: ^2.0.0
   #notus: ^0.1.6
   notus:
@@ -19,8 +18,8 @@ dependencies:
     git:
       url: git://github.com/beerstorm-net/zefyr.git
       path: packages/notus/
-  meta: ^1.3.0
-  quiver: ^3.0.0
+  meta: ^1.7.0
+  quiver: ^3.0.1
   #quiver_hashcode: ^2.0.0
 
 dev_dependencies:
