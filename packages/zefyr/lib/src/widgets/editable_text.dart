@@ -22,7 +22,9 @@ import 'render_context.dart';
 import 'scope.dart';
 import 'selection.dart';
 import 'theme.dart';
-
+import 'dart:io';
+import 'dart:math' as math;
+import 'package:flutter/foundation.dart';
 /// Core widget responsible for editing Zefyr documents.
 ///
 /// Depends on presence of [ZefyrTheme] and [ZefyrScope] somewhere up the
